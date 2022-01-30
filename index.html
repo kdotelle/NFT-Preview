@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Outfit:wght@100;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | NFT preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      body {
+        background-color: hsl(217, 54%, 11%);
+        color: hsl(0, 0%, 100%);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        font-family: "Outfit", sans-serif;
+      }
+      h2 {
+        font-weight: 600;
+      }
+      h2:hover {
+        color: hsl(178, 100%, 50%);
+        cursor: pointer;
+      }
+      #equilibrium {
+        height: 100%;
+        width: 100%;
+        align-self: center;
+        border-radius: 0.5rem;
+        background: hsl(178, 100%, 50%);
+      }
+      .image {
+        position: relative;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 99%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.3s ease;
+        background-color: hsl(178, 100%, 50%);
+        border-radius: 0.5rem;
+      }
+      #icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+      }
+      .image:hover #icon {
+        opacity: 1;
+        cursor: pointer;
+      }
+      .overlay:hover {
+        opacity: 0.3;
+        cursor: pointer;
+      }
+      p {
+        font-size: 18px;
+        font-weight: 300;
+        color: hsl(215, 21%, 45%);
+      }
+      #eth {
+        color: hsl(178, 100%, 50%);
+        font-weight: 400;
+      }
+      .card {
+        background-color: hsl(216, 50%, 16%);
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        width: 18rem;
+        margin: 10rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        position: relative;
+      }
+      .price {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        border-bottom: 1px solid hsl(215, 32%, 27%);
+        font-weight: 400;
+      }
+      .creation {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        font-weight: 400;
+      }
+      #avatar {
+        height: 2rem;
+        border: 1px solid hsl(0, 0%, 100%);
+        border-radius: 50%;
+        margin-top: 1rem;
+        margin-right: 1rem;
+      }
+      span {
+        color: hsl(0, 0%, 100%);
+        font-size: 18px;
+        font-weight: 300;
+      }
+      span:hover {
+        color: hsl(178, 100%, 50%);
+        cursor: pointer;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="image">
+        <img
+          src="images/image-equilibrium.jpg"
+          alt="equilibrium cube"
+          id="equilibrium"
+        />
+        <div class="overlay"></div>
+        <img src="images/icon-view.svg" alt="icon view" id="icon" />
+      </div>
+
+      <h2>Equilibrium #3429</h2>
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+      <div class="price">
+        <p id="eth">
+          <img src="images/icon-ethereum.svg" alt="etherium" /> 0.041 ETH
+        </p>
+        <p><img src="images/icon-clock.svg" alt="clock" /> 3 days left</p>
+      </div>
+      <div class="creation">
+        <img src="images/image-avatar.png" alt="avatar" id="avatar" />
+        <p>Creation of <span>Jules Wyvern</span></p>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Kristen Lloyd</a>.
+    </div>
+  </body>
+</html>
